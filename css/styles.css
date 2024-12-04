@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&family=Lato&family=Akaya+Kanadaka&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-for-backgrounds: #808080;
+  --main-shadow: 0 17px 5px -14px #000;
+  --theme-color: #ffde59;
+}
+
+html {
+  font: 17px/1.5 'Lato', sans-serif;
+}
+
+body {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0000ff+0,ffde59+100 */
+  background: linear-gradient(to bottom, #0000ff 0%, var(--theme-color) 100%);
+  margin: 0;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+#logo {
+  box-shadow: var(--main-shadow);
+  color: var(--theme-color);
+  font: 900 2.5rem/0.25 'Tangerine', sans-serif;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+}
+
+#logo img {
+  max-width: 276px;
+}
+
+header {
+  display: grid;
+  justify-content: center;
+}
+
+#container {
+  background-color: var(--color-for-backgrounds);
+  border-radius: 0 0 15px 15px;
+  box-shadow: var(--main-shadow);
+  display: grid;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 15px;
+}
+
+main {
+  display: grid;
+  padding: 15px;
+}
+
+nav ul {
+  background-color: rgba(55, 53, 53, 0.4);
+  border-radius: 15px 15px 0 0;
+  display: block;
+  margin: 0;
+}
+
+#nav-trigger,
+#nav-checkbox {
+  display: none;
+}
+
+nav {
+  background-color: var(--color-for-backgrounds);
+  border-radius: 15px 15px 0 0;
+  font: 2rem 'Akaya Kanadaka', sans-serif;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  color: var(--theme-color);
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px #000;
+}
+
+nav a:hover,
+#active-page {
+  color: #000;
+  text-shadow: 2px 2px 4px var(--theme-color);
+}
+
+.visually-hidden {
+  clip-path: inset(50%);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+article h1,
+section h1 {
+  font-size: 2rem;
+}
+
+article,
+section {
+  display: grid;
+}
+
+.horizontal-image {
+  border-radius: 15px;
+  justify-self: center;
+  max-width: 816px;
+}
+
+.vertical-image {
+  border-radius: 15px;
+  justify-self: center;
+  max-width: 612px;
+}
+
+footer {
+  font: bold 1.5rem 'Lato', sans-serif;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .visually-hidden {
+    clip-path: unset;
+    clip: unset;
+    height: 100%;
+    position: static;
+    width: 100%;
+  }
+
+  nav {
+    border-radius: 0;
+  }
+  
+  #nav-checkbox {
+    display: none;
+  }
+  
+  nav #nav-checkbox:checked + ul {
+    display: block;
+  }
+  
+  nav ul {
+    border-radius: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  nav li {
+    display: block;
+  }
+
+  nav a {
+    border-bottom: #000 solid 2px;
+    display: block;
+    margin: 0;
+    min-height: 45px;
+    text-align: center;
+  }
+
+  #nav-trigger {
+    background-color: rgba(55, 53, 53, 0.4);
+    color: var(--theme-color);
+    cursor: pointer;
+    display: block;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+}
