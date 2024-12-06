@@ -29,13 +29,13 @@ img {
   box-shadow: var(--main-shadow);
   color: var(--theme-color);
   font: 900 2.5rem/0.25 'Tangerine', sans-serif;
-  justify-content: center;
   padding: 5px;
   position: relative;
   text-align: center;
 }
 
 #logo img {
+  justify-self: center;
   max-width: 276px;
 }
 
